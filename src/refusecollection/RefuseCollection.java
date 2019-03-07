@@ -23,12 +23,35 @@ public class RefuseCollection {
         int maxSchools = 6;
         int numberOfSchoolsPerRegion;
         int weightOfLitter;
+        int choice;
         
         System.out.println("enter number of schools participated per Region: ");
         numberOfSchoolsPerRegion = console.nextInt();
         
         if (numberOfSchoolsPerRegion <= maxSchools)
         {
+            System.out.println("Menu \n");
+            System.out.println("\n");
+            System.out.println("1 - Display in \n2 - Calculate averages \n3 - Display the winner \n4 - QUIT \n\nYour choice: \n");
+            choice = console.nextInt();
+            
+            switch(choice){
+                case 1: 
+                    System.out.println("Chose option 1");
+                    return;
+                case 2: 
+                    System.out.println("Chose option 2");
+                    return;
+                case 3: 
+                    System.out.println("Chose option 3");
+                    return;
+                case 4: 
+                    System.out.println("Chose option 4");
+                    return;
+                default:
+                    System.out.println("System Error: Input not supported");
+            }
+            
             for (int i = 0; i < numberOfSchoolsPerRegion; i++)
             {
                 for (int j = 0; j < regionNumber.length; j++)
@@ -48,6 +71,8 @@ public class RefuseCollection {
                 }
                 System.out.println("\n");
             }
+        }else{
+            System.out.println("System Error: MAximum number of schools allowed per Region is 6");
         }
         
     }
